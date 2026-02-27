@@ -1,11 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Docume</title>
+    <link rel="stylesheet" href="Income.css">
 </head>
+
 <body>
-    
+    <nav>
+        <img src="images/EECU website Logo.png">
+        <h1>Wise-up Budget Calculator</h1>
+    </nav>
+
+    <section class="Page-Selector">
+        <a href="Income">Income</a>
+        <a href="Household">Household</a>
+        <a href="Living">Living</a>
+        <a href="Finance">Family</a>
+        <a href="Travel">Travel</a>
+        <a href="Leisure">Leisure</a>
+        <a href="Result">Result</a>
+    </section>
+
+    <section class="pie-chart">
+        <div id="Total-Annual-Income">
+            <h4>Annual Income</h4>
+            <p>$5716</p>
+        </div>
+
+        <div id="Total-Expenses">
+            <h4>Expenses</h4>
+            <p>$0</p>
+        </div>
+    </section>
+
+    <main class="Incomes">
+        <h1>Income</h1>
+        <p>Please enter a career or manually enter an income</p>
+
+        <h4>Gross Annual Income</h4>
+        <input type="number" id="Income-Input">
+
+        <h4>Career Selection</h4>>
+        <select name="career" id="Career-Selection">
+            <option value="Placeholder">Placeholder</option>
+            <option value="Placeholder">Placeholder</option>
+            <option value="Placeholder">Placeholder</option>
+        </select>
+    </main>
+
+    <button class="NextButton">Next Step</button>
 </body>
+
 </html>
