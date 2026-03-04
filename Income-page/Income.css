@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif ;
+}
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0A5BA8;
+    margin-bottom: 20px;
+}
+nav img {
+    width: 200px;
+    height: auto;
+    margin-left: 20px;
+    padding: 20px;
+}
+
+nav h1 {
+    margin-right: 25%;
+    color: white;
+}
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.Page-Selector {
+    background-color: #D9D9D9;
+    display: flex;
+    justify-content: space-around;
+    margin-right: 3%;
+    margin-left: 3%;
+    margin-bottom: 40px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.Page-Selector a:not(:first-child) {
+    text-decoration: none;
+    color: #767676;
+    border-bottom: solid 2px;
+    width: 14%;
+    height: 30px;
+    align-content: center;
+    padding-left: 10px;
+}
+
+.Page-Selector a:first-child {
+    text-decoration: none;
+    color: #000000;
+    border-bottom: solid 2px;
+    width: 14%;
+    height: 30px;
+    align-content: center;
+    padding-left: 10px;
+}
+
+.pie-chart {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 30%;
+    height: 605px;
+    border-top: #0A5BA8 11px solid;
+    box-shadow: 0px 4px 6.3px 2px rgba(0, 0, 0, 0.25);
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#Total-Annual-Income, #Total-Expenses {
+    display: flex;
+    flex-direction: column;
+    background-color: #F8F8F8;
+    width: 244px;
+    height: 119px;
+    justify-content: center;
+
+}
+
+#Total-Annual-Income h4 {
+    color: #757575;
+    
+}
+#Total-Annual-Income p {
+    color: #00D200;
+}
+
+/* Income page here */
+
+.Incomes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 60%;
+    height: 605px;
+    border-top: #0A5BA8 11px solid;
+    box-shadow: 0px 4px 6.3px 2px rgba(0, 0, 0, 0.25);
+    padding-left: 20px;
+    padding-right: 20px;
+    & > p {
+        color: #767676;
+        margin-bottom: 10px;
+    }
+    & > h4 {
+        color: #656565;
+        font-weight: 600;
+    }
+}
+
+.Incomes h1 {
+    color: #000000;
+    padding-top: 20px;
+    font-size: x-large;
+}
+
+/* border change it!!!!!!!!! */
+.Incomes input {
+    width: 100%;
+    height: 30px;
+    border: 2px 2px solid #D9D9D9;
+    border-radius: 5px;
+    padding-left: 10px;
+    margin-bottom: 30px;
+}
+
+.Incomes select {
+    width: 100%;
+    height: 30px;
+    border: 2px 2px solid #D9D9D9;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
