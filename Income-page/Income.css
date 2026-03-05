@@ -137,4 +137,20 @@ main {
     border-radius: 5px;
     padding-left: 10px;
 }
-
+section {
+    margin: 0em 3.8em;
+}
+#nextStep {
+    display: block;
+    width: 160px;
+    height: 40px;
+    white-space: nowrap;
+    text-align: center;
+    margin-top: 80px;
+    margin-left: auto;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: #0A5BA8;
+    text-decoration: none;
+}
+/* fix the button then make 1 css file for the other pages except for the result because it is different
