@@ -30,12 +30,16 @@ function renderNextField(newPageIndex) {
 for (const selector of arrayOfSelectors) {
     selector.addEventListener("click", () => {
         renderNextField(selector.getAttribute("navTo"))
+        currentPageIndex = 0;
+        // LOWKEY DOESNT WORK MAN.  It resets to 0 instead of the page youre on
     })
 }
 
 nextBtn.addEventListener("click", () => {
     // Move to next index & consequently next page
-    renderNextField(currentPageIndex + 1)
+    if (currentPageIndex < 7) {
+        renderNextField(currentPageIndex + 1)
+    }
 })
 
 
