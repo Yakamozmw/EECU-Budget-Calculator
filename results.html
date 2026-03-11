@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget-calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <img src="../images/EECU website Logo.png">
+        <h1>Wise-up Budget Calculator</h1>
+    </nav>
+
+    <header class="Page-Selector">
+        <button class="navItem0" navTo="0">Income</button>
+        <button class="navItem1" navTo="1">Household</button>
+        <button class="navItem2" navTo="2">Living</button>
+        <button class="navItem3" navTo="3">Finance</button>
+        <button class="navItem4" navTo="4">Family</button>
+        <button class="navItem5" navTo="5">Travel</button>
+        <button class="navItem6" navTo="6">Leisure</button>
+        <button class="navItem7" navTo="7">Result</button>
+    </header>
+    <main id="incomeMain">
+        <!-- Pie chart -->
+        <div id="mainContentResultPg">
+            <section class="pie-chartResultPg">
+                <canvas id="chartResultPg"></canvas>
+                <section class="right-sideResultPg">
+                    <h2>Results Summary</h2>
+                    <p>Here is a complete overview of your monthly budget.</p>
+                    <div id="analysisBoxesResultPg">
+                        <div id="Total-Annual-Income">
+                            <h4>Annual Income</h4>
+                            <p>$5716</p>
+                        </div>
+                        <div id="Remaining">
+                            <h4>Remaining Budget</h4>
+                            <p>$5716</p>
+                        </div>
+                        <div id="Total-Expenses">
+                            <h4>Expenses</h4>
+                            <p>$0</p>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+
+
+            <section class="bottom-part">
+                <!-- JS: .eventListener to button to remove/add hidden class to select input field -->
+                <div id="switch">
+                    <p>Real Time Analysis</p>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                      </label>
+                </div>
+                
+                <button id="ExpResult">Export Results</button>
+            </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
