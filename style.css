@@ -18,8 +18,6 @@ nav {
     justify-content: space-between;
     align-items: center;
     background-color: #0A5BA8;
-    margin-bottom: 10px;
-
 }
 
 nav img {
@@ -119,7 +117,7 @@ nav h1 {
     
 }
 
-#Total-Annual-Income, #Total-Expenses {
+#Total-Annual-Income, #Total-Expenses,
 #analysisBoxesResultPg {
     flex-wrap: wrap-reverse;
     flex-direction: column;
@@ -196,7 +194,7 @@ nav h1 {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
     padding: 20px;
 }
@@ -229,17 +227,14 @@ nav h1 {
 }
 
 /* Main tag */
-main {
-    margin: 0px 20px;
-}
 
-main #mainContent {
+#mainContent {
     display: grid;
     grid-template: auto / 3fr 5fr;
     gap: 85px;
 }
 
-main #mainContentResultPg {
+#mainContentResultPg {
     display: grid;
     grid-template: auto / auto;
     gap: 20px;
@@ -407,11 +402,11 @@ input:checked+.slider:before {
 
 /*Bottom part*/
 
-.bottom-part {
+/*.bottom-part {
     display: flex;
     align-items: end;
     justify-content: space-between;
-}
+}*/
 
 #switch {
     display: flex;

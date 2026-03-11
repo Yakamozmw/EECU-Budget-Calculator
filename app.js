@@ -37,8 +37,10 @@ for (const selector of arrayOfSelectors) {
 
 nextBtn.addEventListener("click", () => {
     // Move to next index & consequently next page
-    if (currentPageIndex < 7) {
+    if (currentPageIndex < 6) {
         renderNextField(currentPageIndex + 1)
+    } else if (currentPageIndex = 6) {
+        window.location.href= 'results.html';
     }
 })
 
