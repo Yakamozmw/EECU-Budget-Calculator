@@ -299,6 +299,12 @@ main #mainContentResultPg {
     background-color: #0A5BA8;
     text-decoration: none;
     align-content: center;
+
+}
+
+#nextStep:hover {
+    opacity: 0.8;
+    animation: Big 0.3s forwards;
 }
 
 #ExpResult {
