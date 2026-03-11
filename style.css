@@ -7,7 +7,7 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif ;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /*Nav Bar*/
@@ -20,6 +20,7 @@ nav {
     background-color: #0A5BA8;
 
 }
+
 nav img {
     width: 200px;
     height: auto;
@@ -61,7 +62,7 @@ nav h1 {
 }
 
 .navItem.selected {
-    color: #000000; 
+    color: #000000;
 }
 
 /*Piechart Section*/
@@ -78,13 +79,45 @@ nav h1 {
     padding: 20px;
 }
 
+.pie-chartResultPg {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #F8F8F8;
+    gap: 10px;
+    height: 605px;
+    border-top: #0A5BA8 11px solid;
+    box-shadow: 0px 4px 6.3px 2px rgba(0, 0, 0, 0.25);
+    padding-left: 20px;
+    padding-right: 20px;
+    padding: 20px;
+}
+
+#chartResultPg {
+    max-width: 30vw;
+    max-height: 20vw;
+}
+
 #analysisBoxes {
     display: flex;
     flex-direction: row;
     gap: 5px;
 }
 
-#Total-Annual-Income, #Total-Expenses {
+#analysisBoxesResultPg {
+    flex-wrap: wrap-reverse;
+    flex-direction: column;
+    color: #F8F8F8;
+}
+
+.right-sideResultPg p {
+    color: grey;
+    margin-bottom: 5vw;
+}
+
+#Total-Annual-Income,
+#Total-Expenses,
+#Remaining {
     display: flex;
     flex-direction: column;
     background-color: #F8F8F8;
@@ -94,19 +127,37 @@ nav h1 {
     padding: 10px;
 }
 
-#Total-Annual-Income h4 {
+#Remaining h4 {
+    font-weight: 200;
     color: #757575;
-    
 }
+
+#Remaining p {
+    font-size: 20px;
+    font-weight: 700;
+    color: #00D200;
+}
+
+#Total-Annual-Income h4 {
+    font-weight: 200;
+    color: #757575;
+
+}
+
 #Total-Annual-Income p {
+    font-size: 20px;
+    font-weight: 700;
     color: #00D200;
 }
 
 #Total-Expenses h4 {
+    font-weight: 200;
     color: #757575;
 }
 
 #Total-Expenses p {
+    font-size: 20px;
+    font-weight: 700;
     color: #d20000;
 }
 
@@ -171,6 +222,13 @@ main #mainContent {
     gap: 50px;
 }
 
+main #mainContentResultPg {
+    display: grid;
+    grid-template: auto / auto;
+    gap: 50px;
+}
+
+
 /* Input Fields */
 /* U need .field to make .hidden work */
 .field.hidden {
@@ -187,11 +245,13 @@ main #mainContent {
     box-shadow: 0px 4px 6.3px 2px rgba(0, 0, 0, 0.25);
     padding-left: 20px;
     padding-right: 20px;
-    & > p {
+
+    &>p {
         color: #767676;
         margin-bottom: 10px;
     }
-    & > h4 {
+
+    &>h4 {
         color: #656565;
         font-weight: 600;
     }
@@ -234,12 +294,28 @@ main #mainContent {
     align-content: center;
 }
 
+#ExpResult {
+    display: block;
+    width: 160px;
+    height: 40px;
+    text-align: center;
+    margin-top: 80px;
+    margin-left: auto;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: #0A5BA8;
+    text-decoration: none;
+    align-content: center;
+}
+
 /*animations*/
 @keyframes Big {
     0% {
         transform: scale(1);
     }
+
     100% {
         transform: scale(1.05);
     }
 }
+
