@@ -15,14 +15,14 @@
     </nav>
 
     <header class="Page-Selector">
-        <button class="navItem selected" navTo="0">Income</button>
-        <button class="navItem" navTo="1">Household</button>
-        <button class="navItem" navTo="2">Living</button>
-        <button class="navItem" navTo="3">Finance</button>
-        <button class="navItem" navTo="4">Family</button>
-        <button class="navItem" navTo="5">Travel</button>
-        <button class="navItem" navTo="6">Leisure</button>
-        <button class="navItem" navTo="7">Result</button>
+        <button class="navItem0" navTo="0">Income</button>
+        <button class="navItem1" navTo="1">Household</button>
+        <button class="navItem2" navTo="2">Living</button>
+        <button class="navItem3" navTo="3">Finance</button>
+        <button class="navItem4" navTo="4">Family</button>
+        <button class="navItem5" navTo="5">Travel</button>
+        <button class="navItem6" navTo="6">Leisure</button>
+        <button class="navItem7" navTo="7">Result</button>
     </header>
     <main id="incomeMain">
         <!-- Pie chart -->
@@ -51,11 +51,14 @@
 
 
 
-            <section>
+            <section class="bottom-part">
                 <!-- JS: .eventListener to button to remove/add hidden class to select input field -->
                 <div id="switch">
                     <p>Real Time Analysis</p>
-                    
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                      </label>
                 </div>
                 
                 <button id="ExpResult">Export Results</button>
