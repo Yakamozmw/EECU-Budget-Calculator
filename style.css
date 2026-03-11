@@ -18,6 +18,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     background-color: #0A5BA8;
+    margin-bottom: 10px;
 
 }
 
@@ -57,12 +58,18 @@ nav h1 {
     height: 30px;
     align-content: center;
     padding-left: 10px;
-
     text-align: left;
+    &:hover {
+        color: #0A5BA8;
+        -webkit-transition: 1s;
+        transition: 1s;
+    }
 }
 
-.navItem.selected {
-    color: #000000;
+
+
+.navItem7 {
+    color: black;
 }
 
 /*Piechart Section*/
@@ -225,7 +232,7 @@ main #mainContent {
 main #mainContentResultPg {
     display: grid;
     grid-template: auto / auto;
-    gap: 50px;
+    gap: 20px;
 }
 
 
@@ -319,3 +326,80 @@ main #mainContentResultPg {
     }
 }
 
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 55px;
+    height: 28px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: black;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/*Bottom part*/
+
+.bottom-part {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+}
+
+#switch {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
