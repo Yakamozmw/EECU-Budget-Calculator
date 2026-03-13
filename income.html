@@ -27,8 +27,11 @@
     <main id="incomeMain">
         <!-- Pie chart -->
         <div id="mainContent">
-            <section class="pie-chart">
-                <canvas id="chart"></canvas>
+            <section class="analysisSection">
+                <div id="chartContainer">
+                    <canvas id="chart"></canvas>
+                </div>
+
                 <div id="analysisBoxes">
                     <div id="Total-Annual-Income">
                         <h4>Annual Income</h4>
@@ -52,10 +55,10 @@
                     <input type="number" placeholder="$" id="Income-Input">
 
                     <h4>Career Selection</h4>
-                    <select name="career" placeholder="Value" id="Career-Selection">
-                            <option value="Placeholder">Placeholder</option>
-                            <option value="Placeholder">Placeholder</option>
-                            <option value="Placeholder">Placeholder</option>
+                    <select name="career" placeholder="Value" id="careerSelector">
+                            <option value="Placeholder1">Placeholder1</option>
+                            <option value="Placeholder2">Placeholder2</option>
+                            <option value="Placeholder3">Placeholder3</option>
                     </select>
                 </section>
 
@@ -193,11 +196,11 @@
         </div>
 
         <section>
-            <!-- JS: .eventListener to button to remove/add hidden class to select input field -->
             <button id="nextStep">Next Step</button>
         </section>
     </main>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="app.js"></script>
 </body>
 

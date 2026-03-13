@@ -72,7 +72,7 @@ nav h1 {
 
 /*Piechart Section*/
 
-.pie-chart {
+.analysisSection {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -111,9 +111,12 @@ nav h1 {
     gap: 5px;
 }
 
-#chart {
-    width: 90%;
-    height: 80%;
+#chartContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
     
 }
 
