@@ -116,15 +116,30 @@ nav h1 {
     align-items: center;
     justify-content: center;
     height: 100%;
-    width: 100%;
+    width: 50%;
     
 }
 
-#Total-Annual-Income, #Total-Expenses,
+.right-sideResultPg {
+    width: 70%;
+}
+
 #analysisBoxesResultPg {
-    flex-wrap: wrap-reverse;
-    flex-direction: column;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
     color: #F8F8F8;
+}
+
+#analysisBoxesResultPg div {
+    display: flex;
+    flex-direction: column;
+    background-color: #F8F8F8;
+    height: 119px;
+    width: 50%;
+    justify-content: center;
+    padding: 10px;
 }
 
 .right-sideResultPg p {
@@ -132,8 +147,8 @@ nav h1 {
     margin-bottom: 5vw;
 }
 
-#Total-Annual-Income,
-#Total-Expenses,
+#Total-Monthly-Income,
+#Total-Monthly-Expenses,
 #Remaining {
     display: flex;
     flex-direction: column;
@@ -156,24 +171,24 @@ nav h1 {
     color: #00D200;
 }
 
-#Total-Annual-Income h4 {
+#Total-Monthly-Income h4 {
     font-weight: 200;
     color: #757575;
 
 }
 
-#Total-Annual-Income p {
+#Total-Monthly-Income p {
     font-size: 20px;
     font-weight: 700;
     color: #00D200;
 }
 
-#Total-Expenses h4 {
+#Total-Monthly-Expenses h4 {
     font-weight: 200;
     color: #757575;
 }
 
-#Total-Expenses p {
+#Total-Monthly-Expenses p {
     font-size: 20px;
     font-weight: 700;
     color: #d20000;
