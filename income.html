@@ -49,7 +49,7 @@
             <section id="inputFields">
                 <section id="incomes" class="field">
                     <h1>Income</h1>
-                    <p>Please enter a career or manually enter an income</p>
+                    <p>Please enter a career or manually enter an income. Estimated federal tax will automatically be deducted.</p>
 
                     <h4>Gross Annual Income</h4>
                     <input type="number" placeholder="$" id="Income-Input">
@@ -64,7 +64,7 @@
                     <h1>Household</h1>
                     <p>Regular household expenses like rent, utility, and mortgage</p>
 
-                    <h4>Rent/Mortgage</h4>
+                    <h4>Rent / Mortgage</h4>
                     <input type="number" placeholder="$" id="Rent-Mortgage">
 
                     <h4>Electricity</h4>
@@ -91,7 +91,7 @@
                     <input type="number" placeholder="$" id="Groceries">
 
                     <h4>Clothing / Shoes</h4>
-                    <input type="number" placeholder="$" id="Clothing-shoes">
+                    <input type="number" placeholder="$" id="Clothing-Shoes">
 
                     <h4>Personal Care / Toiletries</h4>
                     <input type="number" placeholder="$" id="Personal-Care">
@@ -100,27 +100,39 @@
                     <input type="number" placeholder="$" id="Haircuts">
 
                     <h4>Household Supplies</h4>
-                    <input type="number" placeholder="$" id="householdSupplies">
+                    <input type="number" placeholder="$" id="Household-Supplies">
                 </section>
 
                 <section id="finance" class="field hidden">
                     <h1>Finance & Insurance</h1>
-                    <p>Financial commitments like loans, credit cards, and insurance premiums</p>
+                    <p>Financial commitments like loans, credit cards, insurance premiums, and your savings.</p>
                
-                    <h4>groceries</h4>
-                    <input type="number" placeholder="$" id="Groceries">
+                    <h4>Credit Card Payments</h4>
+                    <input type="number" placeholder="$" id="Credit-Card-Payments">
 
-                    <h4>Clothing / Shoes</h4>
-                    <input type="number" placeholder="$" id="Clothing-shoes">
+                    <h4>Personal Loan</h4>
+                    <input type="number" placeholder="$" id="Personal-Loan">
 
-                    <h4>Personal Care / Toiletries</h4>
-                    <input type="number" placeholder="$" id="Personal-Care">
+                    <h4>Car Financing</h4>
+                    <input type="number" placeholder="$" id="Car-Payments">
 
-                    <h4>Haircuts / Beauty</h4>
-                    <input type="number" placeholder="$" id="Haircuts">
+                    <h4>Car Insurance</h4>
+                    <input type="number" placeholder="$" id="Car-Insurance">
 
-                    <h4>Household Supplies</h4>
-                    <input type="number" placeholder="$" id="householdSupplies">
+                    <h4>Life Insurance</h4>
+                    <input type="number" placeholder="$" id="Life-Insurance">
+
+                    <h4>Health Insurance</h4>
+                    <input type="number" placeholder="$" id="Health-Insurance">
+
+                    <h4>Pet Insurance</h4>
+                    <input type="number" placeholder="$" id="Pet-Insurance">
+
+                    <h4>Savings / Emergency Fund</h4>
+                    <input type="number" placeholder="$" id="Savings-Emergency-Fund">
+
+                    <h4>Investments</h4>
+                    <input type="number" placeholder="$" id="Investments">
 
                 </section>
 
@@ -128,60 +140,75 @@
                     <h1>Family & Friends</h1>
                     <p>Spending on family, childcare, gifts, and social occasions</p>
                
-                    <h4>groceries</h4>
-                    <input type="number" placeholder="$" id="Groceries">
+                    <h4>Childcare / Nursery</h4>
+                    <input type="number" placeholder="$" id="Childcare-Nursery">
 
-                    <h4>Clothing / Shoes</h4>
-                    <input type="number" placeholder="$" id="Clothing-shoes">
+                    <h4>School Fees / Supplies</h4>
+                    <input type="number" placeholder="$" id="School-Fees-Supplies">
 
-                    <h4>Personal Care / Toiletries</h4>
-                    <input type="number" placeholder="$" id="Personal-Care">
+                    <h4>Pocket Money / Allowances</h4>
+                    <input type="number" placeholder="$" id="Pocket-Money-Allowances">
 
-                    <h4>Haircuts / Beauty</h4>
-                    <input type="number" placeholder="$" id="Haircuts">
+                    <h4>Gifts & Celebrations</h4>
+                    <input type="number" placeholder="$" id="Gifts-Celebrations">
 
-                    <h4>Household Supplies</h4>
-                    <input type="number" placeholder="$" id="householdSupplies">
+                    <h4>Pet Food & Veterinary</h4>
+                    <input type="number" placeholder="$" id="Pet-Food-Veterinary">
+
+                    <h4>Child Activities / Clubs</h4>
+                    <input type="number" placeholder="$" id="Child-Activities-Clubs">
 
                 </section>
 
                 <section id="travel" class="field hidden">
                     <h1>Travel & Vacation</h1>
                     <p>Transport costs. Including fuel, public transport, car maintenance, and holidays</p>
-                    <h4>groceries</h4>
-                    <input type="number" placeholder="$" id="Groceries">
+                    <h4>Fuel / Petrol</h4>
+                    <input type="number" placeholder="$" id="Fuel-Petrol">
 
-                    <h4>Clothing / Shoes</h4>
-                    <input type="number" placeholder="$" id="Clothing-shoes">
+                    <h4>Public Transport</h4>
+                    <input type="number" placeholder="$" id="Public-Transport">
 
-                    <h4>Personal Care / Toiletries</h4>
-                    <input type="number" placeholder="$" id="Personal-Care">
+                    <h4>Road Tax</h4>
+                    <input type="number" placeholder="$" id="Road-Tax">
 
-                    <h4>Haircuts / Beauty</h4>
-                    <input type="number" placeholder="$" id="Haircuts">
+                    <h4>Car Maintenance</h4>
+                    <input type="number" placeholder="$" id="Car-Maintenance">
 
-                    <h4>Household Supplies</h4>
-                    <input type="number" placeholder="$" id="householdSupplies">
+                    <h4>Parking</h4>
+                    <input type="number" placeholder="$" id="Parking">
+
+                    <h4>Holidays / Trips</h4>
+                    <input type="number" placeholder="$" id="Holidays-Trips">
 
                 </section>
 
                 <section id="leisure" class="field hidden">
                     <h1>Leisure</h1>
                     <p>Expenses for fun. Includes eating, out hobbies, entertainment, and subscriptions</p>               
-                    <h4>groceries</h4>
-                    <input type="number" placeholder="$" id="Groceries">
+                    <h4>Eating Out / Takeout</h4>
+                    <input type="number" placeholder="$" id="Eating-Out-Takeout">
 
-                    <h4>Clothing / Shoes</h4>
-                    <input type="number" placeholder="$" id="Clothing-shoes">
+                    <h4>Drinks / Nights Out</h4>
+                    <input type="number" placeholder="$" id="Drinks-Nights-Out">
 
-                    <h4>Personal Care / Toiletries</h4>
-                    <input type="number" placeholder="$" id="Personal-Care">
+                    <h4>Gym / Fitness</h4>
+                    <input type="number" placeholder="$" id="Gym-Fitness">
 
-                    <h4>Haircuts / Beauty</h4>
-                    <input type="number" placeholder="$" id="Haircuts">
+                    <h4>Hobbies</h4>
+                    <input type="number" placeholder="$" id="Hobbies">
 
-                    <h4>Household Supplies</h4>
-                    <input type="number" placeholder="$" id="householdSupplies">
+                    <h4>Books / Magazines</h4>
+                    <input type="number" placeholder="$" id="Books-Magazines">
+
+                    <h4>Cinema / Events</h4>
+                    <input type="number" placeholder="$" id="Cinema-Events">
+
+                    <h4>Gaming / Apps</h4>
+                    <input type="number" placeholder="$" id="Gaming-Apps">
+
+                    <h4>Lottery / Gambling</h4>
+                    <input type="number" placeholder="$" id="Lottery-Gambling">
 
                 </section>
 
@@ -193,7 +220,7 @@
             </section>
         </div>
 
-        <section>
+        <section class="bottom-part2">
             <button id="nextStep">Next Step</button>
         </section>
     </main>

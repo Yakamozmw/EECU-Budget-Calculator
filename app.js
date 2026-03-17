@@ -24,6 +24,7 @@ let financeExpenses = 0;
 let familyExpenses = 0;
 let travelExpenses = 0;
 let leisureExpenses = 0;
+let savingsExpenses = 0;
 
 // functions
 function saveInputValues() {
@@ -103,17 +104,23 @@ function saveExpenseValues() {
     sessionStorage.setItem('familyExpenses', familyExpenses);
     sessionStorage.setItem('travelExpenses', travelExpenses);
     sessionStorage.setItem('leisureExpenses', leisureExpenses);
+    sessionStorage.setItem('savingsExpenses', savingsExpenses);
 }
 
-function populateValues() {
-    let incomeValues = JSON.parse(localStorage.getItem('incomeValues'));
-    let householdValues = JSON.parse(localStorage.getItem('householdValues'));
-    let livingValues = JSON.parse(localStorage.getItem('livingValues'));
-    let financeValues = JSON.parse(localStorage.getItem('financeValues'));
-    let familyValues = JSON.parse(localStorage.getItem('familyValues'));
-    let travelValues = JSON.parse(localStorage.getItem('travelValues'));
-    let leisureValues = JSON.parse(localStorage.getItem('leisureValues'));
+function saveAnalysisValues() {
+    sessionStorage.setItem('monthlyIncome', monthlyIncome);
+    sessionStorage.setItem('monthlyExpenses', householdExpenses + livingExpenses + financeExpenses + familyExpenses + travelExpenses + leisureExpenses);
+}
 
+async function populateValues() {
+    let incomeValues = JSON.parse(localStorage.getItem('incomeValues')) || 0;
+    let householdValues = JSON.parse(localStorage.getItem('householdValues')) || 0;
+    let livingValues = JSON.parse(localStorage.getItem('livingValues')) || 0;
+    let financeValues = JSON.parse(localStorage.getItem('financeValues')) || 0;
+    let familyValues = JSON.parse(localStorage.getItem('familyValues')) || 0;
+    let travelValues = JSON.parse(localStorage.getItem('travelValues')) || 0;
+    let leisureValues = JSON.parse(localStorage.getItem('leisureValues')) || 0;
+    await addJobs();
     careerSelector.value = localStorage.getItem('careerValue');
     for (let i = 0; i < incomeInputs.length; i++) {
         if (incomeValues[i]) {
@@ -159,6 +166,7 @@ function calculateIncomeAndExpenses() {
     familyExpenses = 0;
     travelExpenses = 0;
     leisureExpenses = 0;
+    savingsExpenses = 0;
     grossIncome = incomeInputs[0].value ? Number(incomeInputs[0].value) : 0;
     monthlyIncome = ((grossIncome - federalTax(grossIncome))/12).toFixed(2);
     for (let input of householdInputs) {
@@ -191,6 +199,7 @@ function calculateIncomeAndExpenses() {
             leisureExpenses += Number(input.value);
         }
     }
+    savingsExpenses = (financeInputs[7].value + financeInputs[8].value) || 0;
 }
 
 function renderNextField(newPageIndex) {
@@ -216,6 +225,7 @@ function setUpPageSelector() {
             selector.addEventListener("click", () => {
                 saveInputValues();
                 saveExpenseValues();
+                saveAnalysisValues();
                 window.location.href = 'results.html';
             }); 
         } else {
@@ -293,23 +303,25 @@ nextBtn.addEventListener("click", () => {
         currentPageIndex = currentPageIndex + 1;
     } else if (currentPageIndex >= 6) {
         saveExpenseValues();
+        saveAnalysisValues();
         window.location.href = 'results.html';
     }
 })
 
 // initialization
-populateValues();
-addJobs();
-calculateIncomeAndExpenses();
-renderNextField(currentPageIndex);
-setUpPageSelector();
-setUpInputs();
+window.onload = async function() {
+        await addJobs();
+        await populateValues();
+        calculateIncomeAndExpenses();
+        renderNextField(currentPageIndex);
+        setUpPageSelector();
+        setUpInputs();
+        update();
+}
 
 // Pie Chart
 const canvas = document.querySelector('#chart');
 let currentChart = null;
-
-update();
 
 function update() {
     incomeDisplay.textContent = `$${monthlyIncome}`;

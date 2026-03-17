@@ -168,7 +168,7 @@ nav h1 {
 #Remaining p {
     font-size: 20px;
     font-weight: 700;
-    color: #00D200;
+    color: #727272;
 }
 
 #Total-Monthly-Income h4 {
@@ -196,6 +196,14 @@ nav h1 {
 
 /*index.html*/
 
+#indexMain img:first-of-type {
+    width: 100%;
+    max-height: 75vh;
+    height: auto;
+    margin-bottom: 3%;
+    object-fit: cover;
+}
+
 #indexMain {
     display: flex;
     flex-direction: column;
@@ -216,6 +224,15 @@ nav h1 {
     align-items: flex-start;
     width: 100%;
     padding: 20px;
+}
+
+.bottom-part2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+    padding-bottom: 20px;
 }
 
 .description {
@@ -271,6 +288,24 @@ nav h1 {
 /* U need .field to make .hidden work */
 .field.hidden {
     display: none
+}
+
+p.hidden {
+    display: none;
+}
+
+#savingsTip {
+    color: #0A5BA8;
+    font-weight: 600;
+    margin-bottom: auto;
+    padding-bottom: 20px;
+}
+
+#expenseTip {
+    color: #0A5BA8;
+    font-weight: 600;
+    margin-bottom: auto;
+    padding-bottom: 20px;
 }
 
 .field {
@@ -331,7 +366,7 @@ nav h1 {
     animation: Big 0.3s forwards;
 }
 
-#ExpResult {
+#expResult {
     display: block;
     width: 160px;
     height: 40px;
@@ -432,4 +467,75 @@ input:checked+.slider:before {
     flex-direction: row;
     align-items: center;
     gap: 10px;
+}
+
+/*Media Queries*/
+/* For mobile phones: */
+@media only screen and (max-width: 600px) {
+    /*index.html */
+    .bottom-part {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
+
+    .description {
+        width: 90%;
+    }
+
+    .description p {
+        text-align: left;
+    }
+
+    .description p:last-of-type {
+        margin-bottom: 20px;
+    }
+
+    /* income.html and results.html */
+    nav h1 {
+        font-size: 18px;
+        margin-right: 3%
+    }
+
+    .Page-Selector {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #nextStep, #expResult {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        margin: 0;      
+    }
+
+    .Page-Selector button {
+        width: 20%;
+        margin-bottom: 5px;
+    }
+
+    #mainContent {
+        grid-template: auto / auto;
+    }
+
+    .field {
+        height: auto;
+    }
+
+    .pie-chartResultPg {
+        flex-direction: column;
+        height: auto;
+    }
+
+    #chartResultPg {
+        max-width: 80vw;
+        max-height: 80vw;
+    }
+
+    .right-sideResultPg {
+        width: 100%;
+    }
 }
